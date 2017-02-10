@@ -108,10 +108,14 @@ body {
      margin-bottom: 25px;
 }
 
-#checkedIn {
+.checkedIn {
   background-color: green;
 }
 #shuffleButton {
   text-align: center;
   color: blue;
+}
+
+button {
+  width: 100%;
 }
