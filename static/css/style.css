@@ -1,6 +1,5 @@
 body {
     background: #222;
-    /*padding: 50px 0 100px;*/
     -webkit-font-smoothing: antialiased;
 }
 .container {   background: rgba(255, 255, 255, 0.1); }
@@ -108,7 +107,7 @@ body {
      margin-bottom: 25px;
 }
 
-#checkedIn {
+.checkedIn {
   background-color: green;
 }
 #shuffleButton {
@@ -154,4 +153,3 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: black;
-}
