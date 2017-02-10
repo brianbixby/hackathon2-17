@@ -14,7 +14,6 @@ $(function() {
 });
 
 $(".btn").click(function() {
-  var element = $(event.target)
   $(this).css('background-color', 'green');
 });
 
