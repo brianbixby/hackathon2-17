@@ -1,3 +1,3 @@
 $(function() {
-    $('.tile').matchHeight();
+    $('.col-xs-4').matchHeight();
 });

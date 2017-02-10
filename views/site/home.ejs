@@ -1,57 +1,11 @@
 <br>
 <br>
 <br>
-<br>
-<h1>home </h1>
-<div class="row">
-  <div class="col-xs-4">
-    <div class="square">
-    </div>
-  </div>
-  <div class="col-xs-4">
-    <div class="square">
-    </div>
-  </div>
-  <div class="col-xs-4">
-    <div class="square">
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-4">
-    <div class="square">
-    </div>
-  </div>
-  <div class="col-xs-4">
-    <div class="square">
-    </div>
-  </div>
-  <div class="col-xs-4">
-    <div class="square">
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-4">
-    <div class="square">
-    </div>
-  </div>
-  <div class="col-xs-4">
-    <div class="square">
-    </div>
-  </div>
-  <div class="col-xs-4">
-    <div class="square">
-    </div>
-  </div>
-</div>
-
-
 
 <div class="row">
-      <div>
+      <div class="tile">
        <% data.businesses.forEach(function(data) { %>
-         <div class="tile col-xs-4">
+         <div class="col-xs-4">
            <p><%= data.name %></p>
            <p><img src='<%= data.image_url %>'></p>
            <p>Categories: <%= data.categories %></p>
