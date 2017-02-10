@@ -1,9 +1,12 @@
+require('dotenv').config();
+
 var express = require("express");
 var bodyParser = require("body-parser");
 var ejsLayouts = require("express-ejs-layouts");
 var path = require('path');
 var moment = require('moment');
 var app = express();
+var session = require('express-session');
 var Yelp = require('yelp');
 var yelp = new Yelp({
   consumer_key: 'KTDFSCvdnsaSQJSZjVHq2g',
@@ -18,6 +21,20 @@ app.use(ejsLayouts);
 app.use(bodyParser.urlencoded({
     extended: false
 }));
+
+// AUTH START
+app.use(session({
+  secret: process.env.SESSION_SECRET || 'supersecretpassword',
+  resave: false,  // don't save if no changes
+  saveUninitialized: true, // save if this is new session that hasn't been saved yet
+}));
+
+var passport = require('./config/ppConfig');
+
+app.use(passport.initialize());
+app.use(passport.session());
+// AUTH END
+
 app.use(express.static(path.join(__dirname, 'static')));
       app.use(require('morgan')('dev'));
 
@@ -34,7 +51,7 @@ app.get('/', function(req, res) {
     res.render('site/home.ejs', {
       data: data
     });
-    
+
   })
   .catch(function (err) {
     console.error(err);
