@@ -59,6 +59,14 @@ app.get('/', function(req, res) {
   });
 });
 
+app.get('/auth/login', function(req, res) {
+  res.render('auth/login')
+})
+
+app.get('/auth/signup', function(req, res) {
+  res.render('auth/signup')
+})
+
 app.get('/facebook', passport.authenticate('facebook', {
   scope: ['public_profile', 'email']
 }));
