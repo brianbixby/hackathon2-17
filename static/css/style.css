@@ -35,3 +35,18 @@ body {
     font-weight: 300;
     opacity: 0.8;
 }
+
+@media screen and (min-width: 0px) and (max-width: 450px) {
+  .hideOnMediaQuery { display: none; }
+}
+
+@media screen and (min-width: 451px) and (max-width: 1024px) {
+  .hideOnMediaQuery { display: block; }
+}
+
+#backbutton {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
