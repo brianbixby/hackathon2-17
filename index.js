@@ -28,15 +28,6 @@ app.use(function(req, res, next) {
 app.get('/', function(req, res) {
   res.render('site/home.ejs');
 });
-app.post('/api/results', function(req, res) {
-  var baseUrl = '';
-})
-
-app.post('/api/results', function(req, res) {
-  var baseUrl = 'http://api.yelp.com/v2/search';
-  var location = 'Seattle';
-  var url = baseUrl + '?location=' + location + '&oauth_consumer_key=' + consumerKey + '&oauth_consumer_secret=' + consumerSecret + '&oauth_token=' + authToken + '&oauth_token_secret=' + authTokenSecret;
-});
 
 var yelp = new Yelp({
   consumer_key: 'KTDFSCvdnsaSQJSZjVHq2g',
