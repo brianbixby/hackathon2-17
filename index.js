@@ -59,6 +59,21 @@ app.get('/', function(req, res) {
   });
 });
 
+
+app.get('/matrix', function(req, res) {
+  yelp.search({ name: 'Il Corvo Pasta', location: 'Seattle' })
+  .then(function (data) {
+    console.log(data);
+    res.render('site/matrix', {
+      data: data
+    });
+
+  })
+  .catch(function (err) {
+    console.error(err);
+  });
+});
+
 app.get('/auth/login', function(req, res) {
   res.render('auth/login')
 })

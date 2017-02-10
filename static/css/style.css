@@ -64,6 +64,7 @@ body {
     opacity: 1;
 }
 .modal-body {
+    display: none; /* Hidden by default */
     position: absolute;
     bottom: -250px;
     left: 5%;
@@ -91,6 +92,7 @@ body {
 }
 
 #modal-popup-tall {
+  display: none; /* Hidden by default */
   height: 20%;
   left: 2.5%;
   right: 2.5%;

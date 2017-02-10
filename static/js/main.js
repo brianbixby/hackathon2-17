@@ -14,6 +14,8 @@ $(".btn").click(function() {
   $("#checkedIn").toggle();
 })
 
+
+
 // var today = new Date();
 // var dd = today.getDate();
 // var mm = today.getMonth()+1; //January is 0!
