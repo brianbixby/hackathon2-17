@@ -3,7 +3,10 @@ $(document).ready(function() {
       $('#slide-bottom-popup-short').modal('show');
       $('#slide-bottom-popup-tall').modal('show');
     }, 1000);
+    var holdingArray = eater38;
+    randomDeal(holdingArray, 9);
 });
+var deck = [];
 
 $(function() {
     $('.col-xs-4').matchHeight();
@@ -12,18 +15,18 @@ $(function() {
 $(".btn").click(function() {
   console.log('hello');
   $("#checkedIn").toggle();
-})
+});
 
-// var today = new Date();
-// var dd = today.getDate();
-// var mm = today.getMonth()+1; //January is 0!
-//
-// var yyyy = today.getFullYear();
-// if(dd<10){
-//     dd='0'+dd;
-// }
-// if(mm<10){
-//     mm='0'+mm;
-// }
-// var today = dd+'/'+mm+'/'+yyyy;
-// document.getElementById("DATE").value = today;
+function randomDeal(array, decksize) {
+    for(var i=0; i<decksize; i++) {
+      var randomIndex = Math.floor(Math.random()*array.length);
+      deck.push(array[randomIndex]);
+      array.splice(randomIndex, 1);
+    }
+    console.log("deck: ", deck);
+    return deck;
+  }
+
+  $("#shuffleButton").click(function() {
+    randomDeal(temp, 9);
+  });
