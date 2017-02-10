@@ -1,7 +1,9 @@
 <div>
-  <div class="restaurant-option homeheading">
-    <h1>Eater 38</h1>
-    <h3>the answer to "what's the best restaurant for..."</h3>
+  <div class= "homeheading">
+    <p id="alignRight">Brian is logged in.  <span class="glyphicon glyphicon-user"></span>
+    <h1 id="homeHeader">Dining Dash </h1>
+    <h3 id="homesubHeader">eat like the experts </h3>
+
   </div>
 
   <div class="row">
@@ -9,13 +11,13 @@
          <% data.businesses.forEach(function(data) { %>
            <div class="col-xs-4">
              <p><%= data.name %></p>
-             <p><img src='<%= data.image_url %>' class="hideOnMediaQuery"></p>
+             <p><img src='<%= data.image_url %>'></p>
              <p class="hideOnMediaQuery">Categories: <%= data.categories %></p>
              <p> <img src='<%= data.rating_img_url %>'>    <span class="hideOnMediaQuery">  <%= data.rating %> </span> </p>
              <p class="hideOnMediaQuery"><%= data.review_count %> Reviews</p>
              <p class="hideOnMediaQuery">Open now: <%= data.is_closed %></p>
              <br>
-             <!-- <a href="#" class="btn btn-primary">Check In</a> -->
+             <a href="#" class="btn btn-primary">Check In</a>
              <!-- <a href="#" class="checkedIn" style="display:none;" class="btn btn-primary">Checked In</a> -->
            </div>
          <% }); %>
