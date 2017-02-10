@@ -24,13 +24,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-var yelp = new Yelp({
-  consumer_key: 'KTDFSCvdnsaSQJSZjVHq2g',
-  consumer_secret: 'f3qYQnTSZ3RnmirwNmnNQo3M2HY',
-  token: 'pXYNMXdTBPTTA1aKvUSpCJa_6Zt1HmDq',
-  token_secret: 'lxc0DX92DKcSIRsAb7y36i958Cs',
-});
-
 //routes
 app.get('/', function(req, res) {
   res.render('site/home.ejs');
@@ -38,21 +31,18 @@ app.get('/', function(req, res) {
 app.post('/api/results', function(req, res) {
   var baseUrl = '';
 })
-http://api.yelp.com/v2/search?location=San+Francisco&oauth_consumer_key=123&oauth_consumer_secret=456&oauth_token=789&oauth_token_secret=012
 
 app.post('/api/results', function(req, res) {
   var baseUrl = 'http://api.yelp.com/v2/search';
   var location = 'Seattle';
   var url = baseUrl + '?location=' + location + '&oauth_consumer_key=' + consumerKey + '&oauth_consumer_secret=' + consumerSecret + '&oauth_token=' + authToken + '&oauth_token_secret=' + authTokenSecret;
-  request(url, function(error, response, body) {
-    var yelp = JSON.parse(body).results;
-    if (!error && response.statusCode == 200) {
-      api.parseJson(parsedMain);
-      res.send({
-        yelp: yelp
-      });
-    }
-  });
+});
+
+var yelp = new Yelp({
+  consumer_key: 'KTDFSCvdnsaSQJSZjVHq2g',
+  consumer_secret: 'f3qYQnTSZ3RnmirwNmnNQo3M2HY',
+  token: 'pXYNMXdTBPTTA1aKvUSpCJa_6Zt1HmDq',
+  token_secret: 'lxc0DX92DKcSIRsAb7y36i958Cs',
 });
 
 yelp.search({ term: 'food', location: 'Montreal' })
