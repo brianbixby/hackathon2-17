@@ -4,7 +4,7 @@ $(document).ready(function() {
       $('#slide-bottom-popup-tall').modal('show');
     }, 1000);
     var holdingArray = eater38;
-    randomDeal();
+    randomDeal(9);
 });
 var deck = [];
 
@@ -17,15 +17,17 @@ $(".btn").click(function() {
   $("#checkedIn").toggle();
 });
 
-function randomDeal() {
-    temp = [];
-    for (var x=0; x< eater38.length; x++){
+function randomDeal(dealSize) {
+    var temp = [];
+    var deck = [];
+    for (var x=0; x < eater38.length; x++){
       temp.push(eater38[x]);
     }
-    for(var i=0; i<9; i++) {
-      var randomIndex = Math.floor(Math.random()*10);
+    for(var i = 0; i < 9; i++) {
+      var randomIndex = Math.floor(Math.random()*temp.length);
+      console.log(temp[randomIndex].name)
       deck.push(temp[randomIndex]);
-      deck.splice(randomIndex, 1);
+      temp.splice(randomIndex, 1);
     }
     console.log("deck: ", deck);
     return deck;
