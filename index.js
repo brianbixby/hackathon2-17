@@ -58,7 +58,16 @@ app.get('/', function(req, res) {
   });
 });
 
+app.get('/facebook', passport.authenticate('facebook', {
+  scope: ['public_profile', 'email']
+}));
 
+app.get('/facebook/callback', passport.authenticate('facebook', {
+  successRedirect: '/',
+  failureRedirect: '/auth/login',
+  //failureFlash: 'An error occurred, please try later',
+  //successFlash: 'You have logged in with Facebook'
+}));
 
 
 
