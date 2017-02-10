@@ -4,7 +4,7 @@ $(document).ready(function() {
       $('#slide-bottom-popup-tall').modal('show');
     }, 1000);
     var holdingArray = eater38;
-    randomDeal(holdingArray, 9);
+    randomDeal();
 });
 var deck = [];
 
@@ -17,9 +17,13 @@ $(".btn").click(function() {
   $("#checkedIn").toggle();
 });
 
-function randomDeal(array, decksize) {
-    for(var i=0; i<decksize; i++) {
-      var randomIndex = Math.floor(Math.random()*array.length);
+function randomDeal() {
+    deck = [];
+    for (var x=0; x< eater38.length; x++){
+      deck.push(eater38[x]);
+    }
+    for(var i=0; i<9; i++) {
+      var randomIndex = Math.floor(Math.random()*9);
       deck.push(array[randomIndex]);
       array.splice(randomIndex, 1);
     }
@@ -28,5 +32,5 @@ function randomDeal(array, decksize) {
   }
 
   $("#shuffleButton").click(function() {
-    randomDeal(temp, 9);
+    randomDeal();
   });
