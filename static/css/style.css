@@ -1,6 +1,6 @@
 body {
-    background: #222;
     -webkit-font-smoothing: antialiased;
+    background-color: #D3D3D3;
 }
 .container {   background: rgba(255, 255, 255, 0.1); }
 .row { padding-top: 25px; padding-bottom: 25px; background: rgba(255, 255, 255, 0.3); }
@@ -175,4 +175,14 @@ body {
 
 .slide-bottom-popup-short {
   background-color: white;
+}
+
+#alignLeft {
+  text-align: left;
+  margin: auto 0;
+  justify-content: center;
+
+}
+#alignRight {
+  text-align: right;
 }
