@@ -157,6 +157,11 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: black;
+}
+
+.restaurant-option {
+  font: white;
+  background-color: red;
   font-family: 'Oswald', sans-serif;
   margin-top: 0;
 }
