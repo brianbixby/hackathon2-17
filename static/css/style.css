@@ -66,11 +66,13 @@ body {
     /* display: none; /* Hidden by default */
     position: absolute;
     bottom: -250px;
-    /*left: 5%;
-    right: 5%;*/
+    left: 10%;
+    right: 10%;
+    top: 17%;
+    bottom: 8%;
     padding: 30px 15px 15px;
-    width: 100%;
-    height: 13%;
+    width: 80%;
+    height: 75%;
     background-color: #e5e5e5;
     border-radius: 6px 6px 0 0;
     opacity: 0;
@@ -140,16 +142,37 @@ body {
 
 .homeheading {
   text-align: center;
-  background-color: #CA278C;
+  background-color: #f9cf00;
   padding: 5px;
 }
 #homeHeader {
   font-weight: bold;
   text-decoration: none;
   color: black;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 0;
 }
 
 #homesubHeader{
   font-weight: 700;
   text-decoration: none;
   color: black;
+  font-family: 'Oswald', sans-serif;
+  margin-top: 0;
+}
+
+.pModal {
+  margin:auto;
+  font-size: 18px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.modal-footer {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.slide-bottom-popup-short {
+  background-color: white;
+}

@@ -31,9 +31,6 @@ function randomDeal(dealSize) {
     console.log("deck: ", deck);
     return deck;
   }
-  console.log("deck: ", deck);
-  return deck;
-}
 
 $("#shuffleButton").click(function() {
   randomDeal();
