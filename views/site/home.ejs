@@ -4,6 +4,17 @@
 <br>
 <h1>home </h1>
 <% data.businesses.forEach(function(data) { %>
-  <%=data.name%>
-
+  <p>Name: <%= data.name %></p>
+  <p>Rating: <%= data.rating %></p>
+  <p>Website: <%= data.mobile_url %></p>
+  <p><img src='<%= data.rating_img_url %>'></p>
+  <p>Reviews: <%= data.review_count %></p>
+  <p>Website: <%= data.url %></p>
+  <p><img src='<%= data.rating_img_url_small %>'></p>
+  <p>Categories: <%= data.categories %></p>
+  <p>Phone #: <%= data.phone %></p>
+  <p>Description: <%= data.snippet_text %></p>
+  <p><img src='<%= data.image_url %>'></p>
+  <p><img src='<%= data.snippet_image_url %>'></p>
+  <p>Open now: <%= data.is_closed %></p>
 <% }); %>
