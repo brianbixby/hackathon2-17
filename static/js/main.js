@@ -18,14 +18,14 @@ $(".btn").click(function() {
 });
 
 function randomDeal() {
-    deck = [];
+    temp = [];
     for (var x=0; x< eater38.length; x++){
-      deck.push(eater38[x]);
+      temp.push(eater38[x]);
     }
     for(var i=0; i<9; i++) {
-      var randomIndex = Math.floor(Math.random()*9);
-      deck.push(array[randomIndex]);
-      array.splice(randomIndex, 1);
+      var randomIndex = Math.floor(Math.random()*10);
+      deck.push(temp[randomIndex]);
+      deck.splice(randomIndex, 1);
     }
     console.log("deck: ", deck);
     return deck;
