@@ -153,3 +153,9 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: black;
+}
+
+.restaurant-option {
+  font: white;
+  background-color: red;
+}

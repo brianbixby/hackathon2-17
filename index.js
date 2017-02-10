@@ -67,12 +67,26 @@ app.get('/matrix', function(req, res) {
     res.render('site/matrix', {
       data: data
     });
-
   })
   .catch(function (err) {
     console.error(err);
   });
 });
+
+app.get('/eater38', function(req, res) {
+  yelp.search({ name: 'Il Corvo Pasta', location: 'Seattle' })
+  .then(function (data) {
+    console.log(data);
+    res.render('site/eater38', {
+      data: data
+    });
+  })
+  .catch(function (err) {
+    console.error(err);
+  });
+});
+
+
 
 app.get('/auth/login', function(req, res) {
   res.render('auth/login')
