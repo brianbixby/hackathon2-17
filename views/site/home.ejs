@@ -49,26 +49,16 @@
 
 
 <div class="row">
- <% data.businesses.forEach(function(data) { %>
-   <div id='this.index' class="col-xs-4 portfolio-item">
-     <p><%= data.name %></p>
-     <p><img src='<%= data.image_url %>'></p>
-     <p>Categories: <%= data.categories %></p>
-     <p> <img src='<%= data.rating_img_url_small %>'>      <%= data.rating %> </p>
-     <p><%= data.review_count %> Reviews</p>
-     <p>Open now: <%= data.is_closed %></p>
-
-
-     <p>Website: <%= data.mobile_url %></p>
-     <p><img src='<%= data.rating_img_url %>'></p>
-
-     <p>Website: <%= data.url %></p>
-
-     <p>Phone #: <%= data.phone %></p>
-     <p>Description: <%= data.snippet_text %></p>
-
-     <p><img src='<%= data.snippet_image_url %>'></p>
-
-   </div>
-   <% }); %>
+      <div>
+       <% data.businesses.forEach(function(data) { %>
+         <div class="tile col-xs-4">
+           <p><%= data.name %></p>
+           <p><img src='<%= data.image_url %>'></p>
+           <p>Categories: <%= data.categories %></p>
+           <p> <img src='<%= data.rating_img_url %>'>      <%= data.rating %> </p>
+           <p><%= data.review_count %> Reviews</p>
+           <p>Open now: <%= data.is_closed %></p>
+         </div>
+       <% }); %>
+     </div>
 </div>
