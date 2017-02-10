@@ -115,3 +115,43 @@ body {
   text-align: center;
   color: blue;
 }
+
+#homePage{
+  background-color: white;
+}
+
+.gray {
+  color: black;
+  background-color: #C8C8C8;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.darkGray {
+  color: white;
+  background-color: #726B68;
+  padding: 20px;
+  font-weight: bold;
+}
+
+#hl {
+  text-decoration: none;
+  color: white;
+}
+
+.homeheading {
+  text-align: center;
+  background-color: #CA278C;
+  padding: 5px;
+}
+#homeHeader {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+#homesubHeader{
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+}

@@ -46,7 +46,7 @@ app.use(function(req, res, next) {
 
 //routes
 app.get('/', function(req, res) {
-  yelp.search({ term: 'Manolin', location: 'Seattle' })
+  yelp.search({ term: 'restaurant', location: 'Seattle' })
   .then(function (data) {
     console.log(data);
     res.render('site/home.ejs', {
